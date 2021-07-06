@@ -18,9 +18,14 @@
                     <input type="text" class="form-control" name="title" id="title" placeholder="Başlık"/>
                 </div>
                 <div class="form-group mt-5">
-                    <label for="postcontent">Makale İçeriği</label>
-                    <textarea type="text" class="form-control" name="postcontent" rows="10" id="postcontent"
+                    <label for="text_content">Makale İçeriği</label>
+                    <textarea type="text" class="form-control" name="text_content" rows="10" id="text_content"
                               placeholder="Makale İçeriği"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="status">
+                        <input type="checkbox" name="status" id="status"/> Status
+                    </label>
                 </div>
                 <div class="form-group mt-3">
                     <button class="btn btn-success btn-block" type="submit"> Add Post</button>

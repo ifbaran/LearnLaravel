@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +19,11 @@ Route::get('/about', 'AboutController@index')->name("about");
 
 Route::prefix("admin")->middleware("auth")->group(function ()
 {
-    Route::get('/', "AdminController@index")->name("admin.index")->middleware("auth");
-    Route::get('/add-post', "AdminController@addPost")->name("admin.addPost");
+    Route::get('/', 'AdminController@index')->name('admin.index')->middleware('auth');
+    Route::get('/add-post', 'AdminController@showAddPost')->name('admin.showAddPost');
+    Route::post('/add-post','AdminController@addPost')->name('admin.addPost');
 });
+
+Route::get('/','SendParameterController@index')->name('admin.sendParameter');
+
+
