@@ -36,4 +36,6 @@
 @endsection
 
 @section('js')
+    <script src="{{ asset('assets/sweet-alert/sweetalert2.all.min.js') }}"></script>
+    @include('sweetalert::alert')
 @endsection

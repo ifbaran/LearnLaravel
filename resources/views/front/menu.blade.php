@@ -18,7 +18,7 @@
                 </li>
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('login')}}">Login</a>
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('register')}}">Register</a>
@@ -30,18 +30,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">
+                        <a class="nav-link" href="{{ route('admin.viewProfile') }}">
                             {{auth()->user()->name}}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('logoutForm').submit();">
+                        <a class="nav-link" href="{{ route('logout') }}">
                             Log Out
                         </a>
-
-                        <form action="{{ route('logout') }}" id="logoutForm" method="POST">
-                            @csrf
-                        </form>
                     </li>
                 @endguest
             </ul>

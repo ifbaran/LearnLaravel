@@ -1,4 +1,4 @@
-Gelen Ad: {{ request('surname') }}
+Gelen Ad: {{ request('name') }}
 <hr>
 <br>
 Gelen Soyad: {{$name . ' ' . $surname}}
