@@ -30,6 +30,9 @@ Route::prefix("admin")->middleware("auth")->group(function ()
     Route::post('/add-post','AdminController@addPost')->name('admin.addPost');
     Route::get('/view-profile','AdminController@viewProfile')->name('admin.viewProfile');
     Route::put('/view-profile','AdminController@viewProfileUpdate')->name('admin.viewProfileUpdate');
+    Route::get('/view-posts', 'AdminController@viewPosts')->name('admin.viewPosts');
+    Route::post('/post-status-change', 'AdminController@postStatusChange')->name('admin.postStatusChange');
+    Route::post('/post-delete','AdminController@postDelete')->name('admin.postDelete');
 });
 
 Route::get('/sendParameter','SendParameterController@index')->name('admin.sendParameter')->middleware('auth');

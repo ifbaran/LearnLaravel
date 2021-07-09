@@ -14,4 +14,8 @@ class Posts extends Model
 //    protected $fillable = ["name","content"]; // Database üzerinde değişim olabilecekler.
     protected $guarded = []; // Database üzerinde değişim yapılmayacaklar. Direkt [] şeklinde bırakırsak tamamına müdahale hakkımız bulunur.
 
+    public function getUsers()
+    {
+        return $this->hasOne('App\Models\User', 'id', 'user_id');
+    }
 }

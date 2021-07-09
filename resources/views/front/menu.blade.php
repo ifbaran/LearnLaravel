@@ -39,6 +39,11 @@
                             Log Out
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.viewPosts') }}">
+                            Posts
+                        </a>
+                    </li>
                 @endguest
             </ul>
             <form class="d-flex">

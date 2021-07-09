@@ -6,6 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/5ffc59b141.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     @yield('css')
 </head>
@@ -15,13 +16,9 @@
 <div class="content min-vh-100 m-5">
     <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-12">
                 @yield('content')
             </div>
-            <div class="col-4">
-                @include('front.category')
-            </div>
-
         </div>
     </div>
 </div>
