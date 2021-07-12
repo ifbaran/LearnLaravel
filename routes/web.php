@@ -47,3 +47,10 @@ Route::post('login','Auth\LoginController@login');
 Route::get('logout','Auth\LoginController@logout')->name('logout')->middleware('auth');
 //---------------------------- LOGOUT END ------------------------------------------------
 
+//---------------------------- PASSWORD RESET BEGIN ------------------------------------------------
+Route::get('/password-reset', 'Auth\ResetPasswordController@showResetPassword')->name('auth.reset_password');
+Route::post('/password-reset', 'Auth\ResetPasswordController@resetPassword')->name('auth.reset_password');
+Route::get('/password-reset/{token}', 'Auth\ResetPasswordController@showResetPasswordForm')->name('auth.reset_password_login');
+Route::post('/password-reset/{token}', 'Auth\ResetPasswordController@resetPasswordForm')->name('auth.reset_password_login');
+//---------------------------- PASSWORD RESET END --------------------------------------------------
+

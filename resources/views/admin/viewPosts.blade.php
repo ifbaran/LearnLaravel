@@ -43,10 +43,14 @@
         @endforeach
         </tbody>
     </table>
+
 @endsection
 
 @section('js')
     <script src="{{ asset('assets/sweet-alert/sweetalert2.all.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     @include('sweetalert::alert')
     <script>
         $(document).ready(function () {
@@ -63,12 +67,12 @@
                     async: false,
                     success: function (response) {
                         if (response.status == 1) {
-                            self[0].classList.add('green');
-                            self[0].classList.remove('red');
+                            self[0].classList.add('btn-success');
+                            self[0].classList.remove('btn-danger');
                             self[0].innerText = "Active";
                         } else {
-                            self[0].classList.add('red');
-                            self[0].classList.remove('green');
+                            self[0].classList.add('btn-danger');
+                            self[0].classList.remove('btn-success');
                             self[0].innerText = "Inactive";
                         }
                     },
@@ -111,6 +115,7 @@
                 })
 
             });
+
         });
     </script>
 @endsection

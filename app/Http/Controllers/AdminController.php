@@ -41,6 +41,7 @@ class AdminController extends Controller
         return redirect()->route('admin.viewPosts',compact('postList'));
     }
 
+
     public function viewProfile()
     {
         $user = Auth::user();
@@ -99,5 +100,6 @@ class AdminController extends Controller
         Posts::where('id',$postId)->delete();
         return response()->json(['message' => 'Success'], 200);
     }
+
 
 }

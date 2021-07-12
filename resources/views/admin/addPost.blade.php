@@ -10,19 +10,19 @@
 @section('content')
     <div class="row">
         <div class="col-md-8 m-auto">
-            <h3>Yeni Makale Ekleme</h3>
+            <h3>Add Post</h3>
             <form action="" method="POST">
                 @csrf
                 <div class="form-group mt-5">
-                    <label for="title">Makale Başlık</label>
-                    <input type="text" class="form-control" name="title" id="title" placeholder="Başlık"/>
+                    <label for="title">Post Title</label>
+                    <input type="text" class="form-control" name="title" id="title" placeholder="Title"/>
                 </div>
                 <div class="form-group mt-5">
-                    <label for="text_content">Makale İçeriği</label>
+                    <label for="text_content">Post Content</label>
                     <textarea type="text" class="form-control" name="text_content" rows="10" id="text_content"
-                              placeholder="Makale İçeriği"></textarea>
+                              placeholder="Content"></textarea>
                 </div>
-                <div class="form-group">
+                <div class="form-group" >
                     <label for="status">
                         <input type="checkbox" name="status" id="status"/> Status
                     </label>
